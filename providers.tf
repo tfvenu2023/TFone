@@ -6,14 +6,12 @@ terraform {
     }
   }
   backend "azurerm" {
-    resource_group_name  = "StorageAccount-ResourceGroup"
-    storage_account_name = "abcd1234"
+    resource_group_name  = "tfresource"
+    storage_account_name = "tfstoragev"
     container_name       = "tfstate"
-    key                  = "prod.terraform.tfstate"
+    key                  = "terraform.tfstate"
   }
 }
-
-
 
 provider "azurerm" {
   # Configuration options
