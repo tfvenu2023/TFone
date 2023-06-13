@@ -33,10 +33,10 @@ resource "azurerm_linux_virtual_machine" "example" {
   name                = "example-machine"
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
-  size                = "Standard_F2"
+  size                = "Standard_F1"
   admin_username      = "adminuser"
   admin_password      = "test@123"
-  disable_password_authentication = false
+  disable_password_authentication = "false"
   network_interface_ids = [
     azurerm_network_interface.example.id,
   ]
